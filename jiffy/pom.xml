@@ -24,6 +24,10 @@
         <!-- Spring Boot Starters -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
@@ -59,13 +63,7 @@
 		<scope>provided</scope>
 	</dependency>
 
-    <annotationProcessorPaths>
-	<path>
-		<groupId>org.projectlombok</groupId>
-		<artifactId>lombok</artifactId>
-		<version>1.18.36</version>
-	</path>
-</annotationProcessorPaths>
+    
 
 
         <!-- Testing -->
@@ -95,10 +93,12 @@
                         <path>
                             <groupId>org.projectlombok</groupId>
                             <artifactId>lombok</artifactId>
+                            <version>1.18.36</version>
                         </path>
                     </annotationProcessorPaths>
                 </configuration>
             </plugin>
+
 
             <!-- Spring Boot Plugin -->
             <plugin>

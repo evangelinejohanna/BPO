@@ -1,4 +1,4 @@
-package main.java.com.bpo.jiffy.config;
+package com.bpo.jiffy.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.messaging.simp.config.MessageBrokerRegistry;

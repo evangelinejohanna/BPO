@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat - Jiffy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1f2937",
+              accent: "#06b6d4",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-primary text-white font-sans">
+    <!-- Navbar (Same as Main Page) -->
+    <nav class="flex justify-between items-center p-5 bg-gray-900">
+      <div class="flex items-center space-x-3">
+        <div class="w-8 h-8 bg-accent"></div>
+        <h1 class="text-2xl font-bold">JIFFY</h1>
+      </div>
+      <ul class="flex space-x-6">
+        <li><a href="/" class="hover:text-accent">Home</a></li>
+        <li><a href="#" class="hover:text-accent">Features</a></li>
+        <li><a href="#" class="hover:text-accent">Product Guide</a></li>
+        <li><a href="#" class="hover:text-accent">Templates</a></li>
+        <li><a href="#" class="hover:text-accent">Pricing</a></li>
+        <li><a href="#" class="hover:text-accent">Enterprise</a></li>
+      </ul>
+      <div class="flex space-x-4">
+        <button class="bg-accent text-black px-4 py-2 rounded-lg font-semibold">
+          GET STARTED
+        </button>
+        <button class="hover:text-accent">Sign In</button>
+      </div>
+    </nav>
+
+    <!-- Chat Section -->
+    <section class="flex justify-center items-center h-screen">
+      <div class="w-full max-w-md bg-gray-800 rounded-lg shadow-lg p-6">
+        <div class="text-center text-xl font-semibold mb-4">Live Chat</div>
+        <div
+          id="messages"
+          class="h-64 overflow-y-auto bg-gray-700 p-4 rounded-lg mb-3"
+        ></div>
+        <div class="flex">
+          <input
+            id="messageInput"
+            type="text"
+            class="flex-1 p-2 text-black rounded-lg"
+            placeholder="Type a message..."
+          />
+          <button
+            id="sendButton"
+            class="ml-2 bg-accent text-black px-4 py-2 rounded-lg"
+          >
+            Send
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.5.1/sockjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+    <script src="./chat.js"></script>
+  </body>
+</html>
